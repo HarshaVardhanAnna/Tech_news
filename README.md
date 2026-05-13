@@ -19,7 +19,7 @@ tech-digest/
 
 ---
 
-## ⚙️ Setup (One Time Only)
+## Setup
 
 ### Step 1 — Clone / Download the project
 Put the files in a folder on your machine, e.g. `~/projects/tech-digest/`
@@ -59,7 +59,7 @@ Check your inbox! You should receive a digest email within seconds.
 
 ---
 
-## ⏰ Automate It (Run Daily)
+## Automate It (Run Daily)
 
 ### On Mac/Linux — Using Cron
 Run every day at 8:00 AM:
@@ -118,70 +118,3 @@ Then in your GitHub repo → **Settings → Secrets → Actions** → add the 3 
 Push this file and it runs automatically every day. 100% free.
 
 ---
-
-## 🎯 Your 14-Day LinkedIn Workflow
-
-```
-Day 1-13:  Digest arrives in inbox daily
-           → Star/save interesting articles
-           → Note any good learnings from work
-
-Day 14:    Come to Claude with:
-           - "Here are my saved links from 2 weeks: [paste links]"
-           - "I learned X at work this week"
-           → Claude helps you write one focused LinkedIn post
-```
-
----
-
-## 🔧 Customization
-
-### Add more keywords (in digest.py)
-```python
-KEYWORDS = [
-    "python", "golang", ...
-    "your_new_keyword_here"    ← just add here
-]
-```
-
-### Add more RSS feeds
-```python
-RSS_FEEDS = [
-    ...
-    "https://yourfavoriteblog.com/feed"   ← add any blog's RSS URL
-]
-```
-
-### Add more subreddits
-```python
-REDDIT_SUBREDDITS = [
-    ...
-    "devops", "kubernetes"   ← add subreddit names
-]
-```
-
----
-
-## 🚨 Troubleshooting
-
-| Problem | Fix |
-|---|---|
-| `SMTPAuthenticationError` | Wrong app password — regenerate it |
-| `No email received` | Check spam folder |
-| `0 articles fetched` | Reddit/HN might be rate-limiting, retry in 10 min |
-| Script runs but no email | Check .env has no extra spaces |
-| Cron not working | Use absolute paths in cron, check `digest.log` |
-
----
-
-## 💡 What to Post on LinkedIn (Ideas)
-
-After 14 days of reading, your post could be about:
-- A pattern you noticed ("Every ML post this week mentioned LLM fine-tuning — here's why")
-- A tool comparison ("dbt vs SQLMesh — what the community is saying")
-- A lesson from your job ("How I debugged a slow SQL query at work")
-- A "TIL" post ("TIL Python's walrus operator can simplify while loops")
-
----
-
-Built for personal use. Python 3.9+. No paid APIs needed.
